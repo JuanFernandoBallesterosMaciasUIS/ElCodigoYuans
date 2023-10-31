@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://c1omm5hpwc3pk"]
+
+[node name="Cifrado Cesar" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+clip_contents = true
+offset_left = 251.0
+offset_top = 45.0
+offset_right = 899.0
+offset_bottom = 185.0
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 100
+text = "Cifrado Cesar"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_left = 427.0
+offset_top = 487.0
+offset_right = 756.0
+offset_bottom = 536.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="Button" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Cifrar"
+
+[node name="Button2" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Decifrar
+"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+offset_left = 149.0
+offset_top = 196.0
+offset_right = 1038.0
+offset_bottom = 421.0
+size_flags_horizontal = 2
+size_flags_vertical = 3
+
+[node name="TextEdit" type="TextEdit" parent="HBoxContainer2"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+placeholder_text = "Texto a cifrar o decifrar"
+
+[node name="TextEdit2" type="TextEdit" parent="HBoxContainer2"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+placeholder_text = "Resultado"

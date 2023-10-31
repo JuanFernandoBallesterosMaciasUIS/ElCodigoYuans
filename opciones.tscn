@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://bs1i7n3kwndma"]
+
+[ext_resource type="Script" path="res://opciones.gd" id="1_twkem"]
+
+[node name="opciones" type="Node2D"]
+script = ExtResource("1_twkem")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 156.0
+offset_top = -8.0
+offset_right = 957.0
+offset_bottom = 272.0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 50
+text = "El codigo Yuans"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+offset_left = 248.0
+offset_top = 222.0
+offset_right = 828.0
+offset_bottom = 466.0
+size_flags_vertical = 6
+
+[node name="Button" type="Button" parent="VBoxContainer2"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+text = "Ejecutar"
+
+[node name="Button2" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+text = "Ejecutar"
+
+[node name="Button3" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+text = "Ejecutar"

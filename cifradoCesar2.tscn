@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://dmbqghu30g52r"]
+[gd_scene load_steps=2 format=3 uid="uid://dmbqghu30g52r"]
+
+[ext_resource type="Script" path="res://cifradoCesar2.gd" id="1_qgy4r"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -7,9 +9,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_qgy4r")
 
 [node name="Label" type="Label" parent="."]
 clip_contents = true
+layout_mode = 0
 offset_left = 251.0
 offset_top = 45.0
 offset_right = 899.0
@@ -21,6 +25,7 @@ text = "Cifrado Cesar"
 horizontal_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
 offset_left = 427.0
 offset_top = 487.0
 offset_right = 756.0
@@ -39,6 +44,7 @@ text = "Decifrar
 "
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="."]
+layout_mode = 0
 offset_left = 149.0
 offset_top = 196.0
 offset_right = 1038.0

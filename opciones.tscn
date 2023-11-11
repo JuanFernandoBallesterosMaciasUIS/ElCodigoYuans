@@ -6,10 +6,10 @@
 script = ExtResource("1_twkem")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-offset_left = 156.0
-offset_top = -8.0
-offset_right = 957.0
-offset_bottom = 272.0
+offset_left = 170.0
+offset_top = -82.0
+offset_right = 971.0
+offset_bottom = 198.0
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
@@ -21,29 +21,53 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="."]
-offset_left = 248.0
-offset_top = 222.0
-offset_right = 828.0
-offset_bottom = 466.0
-size_flags_vertical = 6
+offset_left = 191.0
+offset_top = 122.0
+offset_right = 935.0
+offset_bottom = 533.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="Button" type="Button" parent="VBoxContainer2"]
-custom_minimum_size = Vector2(100, 0)
+custom_minimum_size = Vector2(100, 70)
 layout_mode = 2
 size_flags_vertical = 3
+auto_translate = false
+localize_numeral_system = false
 theme_override_font_sizes/font_size = 30
 text = "Ejecutar"
 
 [node name="Button2" type="Button" parent="VBoxContainer2"]
+custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 30
 text = "Cifrado César"
 
 [node name="Button3" type="Button" parent="VBoxContainer2"]
+custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 30
-text = "Ejecutar"
+text = "Transposición columnar simple
+"
+
+[node name="Button4" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+text = "Cifrado de Vinegre"
+
+[node name="Button5" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+text = "Cifrado Playfair"
+
+[node name="Button6" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Cifrado de Vernam"
 
 [connection signal="pressed" from="VBoxContainer2/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="VBoxContainer2/Button3" to="." method="_on_button_3_pressed"]

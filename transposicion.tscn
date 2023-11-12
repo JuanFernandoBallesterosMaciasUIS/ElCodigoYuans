@@ -10,3 +10,65 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_uwdmk")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 211.0
+offset_top = 52.0
+offset_right = 967.0
+offset_bottom = 164.0
+theme_override_font_sizes/font_size = 50
+text = "Transposicion columnar simple"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 399.0
+offset_top = 523.0
+offset_right = 723.0
+offset_bottom = 578.0
+
+[node name="Button" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Cifrar"
+
+[node name="Button2" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Descifrar"
+
+[node name="TextEdit1" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 185.0
+offset_top = 155.0
+offset_right = 568.0
+offset_bottom = 224.0
+placeholder_text = "Texto a cifrar o descifrar"
+
+[node name="TextEdit2" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 185.0
+offset_top = 231.0
+offset_right = 568.0
+offset_bottom = 271.0
+placeholder_text = "Clave"
+
+[node name="TextEdit3" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 679.0
+offset_top = 149.0
+offset_right = 967.0
+offset_bottom = 474.0
+placeholder_text = "Matriz"
+
+[node name="TextEdit4" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 284.0
+offset_right = 567.0
+offset_bottom = 353.0
+placeholder_text = "Resultado"
+
+[connection signal="pressed" from="HBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button2" to="." method="_on_button_2_pressed"]

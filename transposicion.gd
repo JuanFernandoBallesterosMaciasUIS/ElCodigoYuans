@@ -42,30 +42,45 @@ func cifrar(mensaje: String, clave: String) -> String:
 	return mensaje_cifrado.strip_edges()
 
 # Función para descifrar el mensaje
+# Función para descifrar el mensaje
+# Función para descifrar el mensaje
 func descifrar(mensaje_cifrado: String, clave: String) -> String:
 	var mensaje_descifrado = ""
-	var matriz = crear_matriz(mensaje_cifrado, clave)
+	var longitud_clave = clave.length()
+	var num_filas = int(ceil(mensaje_cifrado.length() / float(longitud_clave)))
+	var matriz = []
+
+	# Inicializar la matriz con espacios
+	for i in range(num_filas):
+		var fila = []
+		for j in range(longitud_clave):
+			fila.append(" ")
+			matriz.append(fila)  # Crear una fila con espacios
+
 	var caracteres_clave = clave.split("")
-	# Luego, ordena esa lista en su lugar
 	caracteres_clave.sort()
-# Ahora puedes usar la lista ordenada
-	var orden_clave = caracteres_clave
+
+	# Aquí vamos a crear los índices manualmente
+	var indices = []
+	for letra in caracteres_clave:
+		indices.append(clave.find(letra))
+
 	var contador_letras = 0
 
-	# Descifrar basándonos en el orden de la clave
-	for letra in orden_clave:
-		var indice = clave.find(letra)
-		for fila in range(matriz.size()):
+	# Distribuir el mensaje cifrado en la matriz según la clave ordenada
+	for indice in indices:
+		for i in range(num_filas):
 			if contador_letras < mensaje_cifrado.length():
-				matriz[fila][indice] = mensaje_cifrado[contador_letras]
+				matriz[i][indice] = mensaje_cifrado[contador_letras]
 				contador_letras += 1
 
-	# Reconstruir el mensaje original
+	# Reconstruir el mensaje original leyendo las filas
 	for fila in matriz:
 		for elemento in fila:
-			mensaje_descifrado += elemento if elemento != " " else ""
+			if elemento != " ":
+				mensaje_descifrado += elemento
 
-	return mensaje_descifrado.strip_edges()
+	return mensaje_descifrado
 
 
 

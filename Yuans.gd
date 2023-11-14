@@ -1,4 +1,4 @@
-extends Button
+extends Control
 
 # Preload the images (assuming you have a limited set of letters/images)
 var images = {
@@ -31,23 +31,21 @@ var images = {
 	"Z": preload("res://imagenes/Z.png")
 	}
 
-func _ready():
-	connect("pressed", self, "_on_button_pressed")
-
 func _on_button_pressed():
-		# Obtiene el texto ingresado y lo convierte a mayúsculas
+	# Obtiene el texto ingresado y lo convierte a mayúsculas
 	var texto_ingresado = $TextEdit.text.to_upper()  # Suponiendo que la ruta al nodo de TextEdit es `TextEdit`
-	# Suponiendo que la ruta al contenedor es `VBoxContainer`
-	var contenedor = $VBoxContainer
+	# Suponiendo que la ruta al contenedor es `HBoxContainer`
+	var contenedor = $HBoxContainer
 	# Elimina todas las imágenes existentes en el contenedor
-	contenedor.queue_free_children()
-	
+	for child in contenedor.get_children():
+		child.queue_free()
+
 	# Itera sobre cada letra del texto ingresado
 	for letra in texto_ingresado:
 		# Verifica si existe una imagen para la letra actual
-		if imagenes.has(letra):
+		if images.has(letra):
 			# Obtiene la textura correspondiente a la letra
-			var textura_imagen = imagenes[letra]
+			var textura_imagen = images[letra]
 			var imagen = TextureRect.new()
 			imagen.texture = textura_imagen
 			# Añade la imagen al contenedor
@@ -55,3 +53,6 @@ func _on_button_pressed():
 		else:
 			# Si no existe una imagen para la letra, imprime un mensaje en la consola
 			print("No existe imagen para la letra: " + letra)
+
+
+

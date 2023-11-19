@@ -56,19 +56,9 @@ text = "Transposición columnar simple
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 30
-text = "Cifrado de Vinegre"
-
-[node name="Button5" type="Button" parent="VBoxContainer2"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 30
-text = "Cifrado Playfair"
-
-[node name="Button6" type="Button" parent="VBoxContainer2"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
 text = "Cifrado de Vernam"
 
 [connection signal="pressed" from="VBoxContainer2/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="VBoxContainer2/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="VBoxContainer2/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="VBoxContainer2/Button4" to="." method="_on_button_4_pressed"]

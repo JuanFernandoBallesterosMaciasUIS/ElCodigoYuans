@@ -97,3 +97,7 @@ func _on_button_pressed():
 
 func _on_button_2_pressed():
 	$TextEdit1.text = descifrar($TextEdit4.text, $TextEdit2.text)
+
+
+func _on_button_3_pressed():
+	get_tree().change_scene_to_file("res://opciones.tscn")

@@ -56,5 +56,14 @@ offset_top = 267.0
 offset_right = 1236.0
 offset_bottom = 674.0
 
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 13.0
+offset_right = 138.0
+offset_bottom = 45.0
+text = "Regresar"
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="value_changed" from="HScrollBar" to="." method="_on_h_scroll_bar_value_changed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

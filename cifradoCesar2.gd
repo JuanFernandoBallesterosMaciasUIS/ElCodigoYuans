@@ -36,3 +36,7 @@ func _on_button_2_pressed():
 				cifrado += abc[(j - 3) % 27]
 	
 	$HBoxContainer2/TextEdit2.text = cifrado
+
+
+func _on_button_3_pressed():
+	get_tree().change_scene_to_file("res://opciones.tscn")

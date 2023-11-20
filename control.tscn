@@ -1,6 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://ba328uomqital"]
+[gd_scene load_steps=3 format=3 uid="uid://ba328uomqital"]
 
 [ext_resource type="Script" path="res://control.gd" id="1_0fbo7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xjrs1"]
+bg_color = Color(0.180392, 0.180392, 0.180392, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -39,6 +46,7 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_vertical = 10
 theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_xjrs1")
 text = "Empezar"
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]

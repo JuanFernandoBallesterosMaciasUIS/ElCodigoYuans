@@ -1,18 +1,75 @@
-[gd_scene load_steps=2 format=3 uid="uid://bs1i7n3kwndma"]
+[gd_scene load_steps=4 format=3 uid="uid://bs1i7n3kwndma"]
 
 [ext_resource type="Script" path="res://opciones.gd" id="1_twkem"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oojgr"]
+bg_color = Color(0.180392, 0.180392, 0.180392, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wtnhr"]
+bg_color = Color(0.180392, 0.180392, 0.180392, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
 
 [node name="opciones" type="Node2D"]
 script = ExtResource("1_twkem")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-offset_left = 170.0
-offset_top = -82.0
-offset_right = 971.0
-offset_bottom = 198.0
+[node name="Button" type="Button" parent="."]
+custom_minimum_size = Vector2(100, 70)
+offset_left = 332.0
+offset_top = 185.0
+offset_right = 826.0
+offset_bottom = 272.0
+size_flags_vertical = 3
+auto_translate = false
+localize_numeral_system = false
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_oojgr")
+text = "Ejecutar"
 
-[node name="Label" type="Label" parent="VBoxContainer"]
-layout_mode = 2
+[node name="Button2" type="Button" parent="."]
+custom_minimum_size = Vector2(0, 70)
+offset_left = 328.0
+offset_top = 292.0
+offset_right = 824.0
+offset_bottom = 383.0
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_oojgr")
+text = "Cifrado César"
+
+[node name="Button3" type="Button" parent="."]
+custom_minimum_size = Vector2(0, 70)
+offset_left = 325.0
+offset_top = 510.0
+offset_right = 820.0
+offset_bottom = 601.0
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_oojgr")
+text = "Transposición columnar simple
+"
+
+[node name="Button4" type="Button" parent="."]
+offset_left = 325.0
+offset_top = 403.0
+offset_right = 820.0
+offset_bottom = 491.0
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_wtnhr")
+text = "Cifrado de Vernam"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 366.0
+offset_top = 44.0
+offset_right = 788.0
+offset_bottom = 144.0
 size_flags_horizontal = 4
 size_flags_vertical = 6
 theme_override_font_sizes/font_size = 50
@@ -20,45 +77,7 @@ text = "El codigo Yuans"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="."]
-offset_left = 191.0
-offset_top = 122.0
-offset_right = 935.0
-offset_bottom = 533.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Button" type="Button" parent="VBoxContainer2"]
-custom_minimum_size = Vector2(100, 70)
-layout_mode = 2
-size_flags_vertical = 3
-auto_translate = false
-localize_numeral_system = false
-theme_override_font_sizes/font_size = 30
-text = "Ejecutar"
-
-[node name="Button2" type="Button" parent="VBoxContainer2"]
-custom_minimum_size = Vector2(0, 70)
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 30
-text = "Cifrado César"
-
-[node name="Button3" type="Button" parent="VBoxContainer2"]
-custom_minimum_size = Vector2(0, 70)
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 30
-text = "Transposición columnar simple
-"
-
-[node name="Button4" type="Button" parent="VBoxContainer2"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 30
-text = "Cifrado de Vernam"
-
-[connection signal="pressed" from="VBoxContainer2/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="VBoxContainer2/Button2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="VBoxContainer2/Button3" to="." method="_on_button_3_pressed"]
-[connection signal="pressed" from="VBoxContainer2/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]

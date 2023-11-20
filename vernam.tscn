@@ -1,55 +1,99 @@
-[gd_scene load_steps=2 format=3 uid="uid://dbfsgvo8rfg6b"]
+[gd_scene load_steps=6 format=3 uid="uid://dbfsgvo8rfg6b"]
 
 [ext_resource type="Script" path="res://vernam.gd" id="1_xqfd3"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ll0n7"]
+bg_color = Color(0.180392, 0.180392, 0.180392, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_giws7"]
+bg_color = Color(0.180392, 0.180392, 0.180392, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i5ccm"]
+bg_color = Color(0.180392, 0.180392, 0.180392, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q4r6k"]
+bg_color = Color(0.180392, 0.180392, 0.180392, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
 [node name="vernam" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_xqfd3")
 
 [node name="TextEdit1" type="TextEdit" parent="."]
 layout_mode = 0
-offset_left = 313.0
-offset_top = 155.0
-offset_right = 696.0
-offset_bottom = 224.0
-placeholder_text = "Texto a cifrar o descifrar"
+offset_left = -215.0
+offset_top = -169.0
+offset_right = 213.0
+offset_bottom = -69.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ll0n7")
+placeholder_text = "   
+   Texto a cifrar o descifrar"
 
 [node name="TextEdit2" type="TextEdit" parent="."]
-layout_mode = 0
-offset_left = 313.0
-offset_top = 231.0
-offset_right = 696.0
-offset_bottom = 271.0
-placeholder_text = "Clave"
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -216.0
+offset_top = -54.0
+offset_right = 211.0
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_giws7")
+placeholder_text = "    
+   Clave"
 
 [node name="TextEdit3" type="TextEdit" parent="."]
 layout_mode = 0
-offset_left = 306.0
-offset_top = 310.0
-offset_right = 689.0
-offset_bottom = 379.0
-placeholder_text = "Resultado"
+offset_left = -212.0
+offset_top = 56.0
+offset_right = 208.0
+offset_bottom = 136.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_i5ccm")
+placeholder_text = "     
+    Resultado"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 283.0
-offset_top = 37.0
-offset_right = 907.0
-offset_bottom = 128.0
+offset_left = -228.0
+offset_top = -281.0
+offset_right = 284.0
+offset_bottom = -195.0
 theme_override_font_sizes/font_size = 50
 text = "Cifrado de Vernam"
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 367.0
-offset_top = 439.0
-offset_right = 595.0
-offset_bottom = 495.0
+offset_left = -113.0
+offset_top = 183.0
+offset_right = 115.0
+offset_bottom = 239.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_q4r6k")
 text = "Ejecutar"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -72,6 +72,7 @@ placeholder_text = "
      Resultado"
 
 [node name="Button" type="Button" parent="."]
+layout_mode = 0
 offset_left = 375.0
 offset_top = 540.0
 offset_right = 530.0
@@ -80,6 +81,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_1h255")
 text = "Cifrar"
 
 [node name="Button2" type="Button" parent="."]
+layout_mode = 0
 offset_left = 632.0
 offset_top = 540.0
 offset_right = 781.0

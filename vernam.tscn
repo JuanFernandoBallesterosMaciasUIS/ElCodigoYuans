@@ -4,6 +4,8 @@
 [ext_resource type="FontFile" uid="uid://coqsqbp81nvxq" path="res://simply_rounded/Simply Rounded Bold.ttf" id="2_5f1ur"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ll0n7"]
+content_margin_left = 18.0
+content_margin_top = 56.0
 bg_color = Color(0.180392, 0.180392, 0.180392, 1)
 corner_radius_top_left = 25
 corner_radius_top_right = 25
@@ -11,6 +13,8 @@ corner_radius_bottom_right = 25
 corner_radius_bottom_left = 25
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_giws7"]
+content_margin_left = 18.0
+content_margin_top = 43.0
 bg_color = Color(0.180392, 0.180392, 0.180392, 1)
 corner_radius_top_left = 25
 corner_radius_top_right = 25
@@ -18,6 +22,8 @@ corner_radius_bottom_right = 25
 corner_radius_bottom_left = 25
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i5ccm"]
+content_margin_left = 18.0
+content_margin_top = 40.0
 bg_color = Color(0.180392, 0.180392, 0.180392, 1)
 corner_radius_top_left = 25
 corner_radius_top_right = 25
@@ -56,8 +62,7 @@ offset_top = -169.0
 offset_right = 213.0
 offset_bottom = -69.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_ll0n7")
-placeholder_text = "   
-   Texto a cifrar o descifrar"
+placeholder_text = "Texto a cifrar o descifrar"
 
 [node name="TextEdit2" type="TextEdit" parent="."]
 layout_mode = 1
@@ -73,8 +78,7 @@ offset_bottom = 31.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_giws7")
-placeholder_text = "    
-   Clave"
+placeholder_text = "Clave"
 
 [node name="TextEdit3" type="TextEdit" parent="."]
 layout_mode = 0
@@ -83,8 +87,7 @@ offset_top = 56.0
 offset_right = 208.0
 offset_bottom = 136.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_i5ccm")
-placeholder_text = "     
-    Resultado"
+placeholder_text = "Resultado"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0

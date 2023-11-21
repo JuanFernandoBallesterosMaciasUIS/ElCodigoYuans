@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dmbqghu30g52r"]
+[gd_scene load_steps=7 format=3 uid="uid://dmbqghu30g52r"]
 
 [ext_resource type="Script" path="res://cifradoCesar2.gd" id="1_qgy4r"]
 [ext_resource type="FontFile" uid="uid://coqsqbp81nvxq" path="res://simply_rounded/Simply Rounded Bold.ttf" id="2_xcuv5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s775v"]
-content_margin_left = 16.0
+content_margin_left = 18.0
+content_margin_top = 18.0
 bg_color = Color(0.180392, 0.180392, 0.180392, 1)
 corner_radius_top_left = 25
 corner_radius_top_right = 25
@@ -25,7 +26,14 @@ corner_radius_top_right = 25
 corner_radius_bottom_right = 25
 corner_radius_bottom_left = 25
 
-[node name="Control" type="Control"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5eyhj"]
+bg_color = Color(0.180392, 0.180392, 0.180392, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[node name="Control2" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -70,36 +78,23 @@ size_flags_vertical = 3
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_s775v")
-placeholder_text = "    
-Texto a cifrar o decifrar"
+placeholder_text = "Texto a cifrar o decifrar"
 
 [node name="TextEdit2" type="TextEdit" parent="HBoxContainer2"]
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 size_flags_horizontal = 10
 theme_override_styles/normal = SubResource("StyleBoxFlat_s775v")
-placeholder_text = "
-Resultado"
+placeholder_text = "Resultado"
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 375.0
-offset_top = 540.0
-offset_right = 530.0
-offset_bottom = 592.0
+offset_left = 400.0
+offset_top = 542.0
+offset_right = 555.0
+offset_bottom = 594.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_1h255")
 text = "Cifrar"
-
-[node name="Button2" type="Button" parent="."]
-layout_mode = 0
-offset_left = 632.0
-offset_top = 540.0
-offset_right = 781.0
-offset_bottom = 595.0
-size_flags_horizontal = 10
-theme_override_styles/normal = SubResource("StyleBoxFlat_s775v")
-text = "Decifrar
-"
 
 [node name="Button3" type="Button" parent="."]
 layout_mode = 0
@@ -110,6 +105,14 @@ offset_bottom = 57.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_i8km1")
 text = "Regresar"
 
+[node name="Button4" type="Button" parent="."]
+offset_left = 636.0
+offset_top = 535.0
+offset_right = 785.0
+offset_bottom = 595.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_5eyhj")
+text = "Decifrar"
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]

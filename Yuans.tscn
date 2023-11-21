@@ -12,6 +12,7 @@ corner_radius_bottom_left = 25
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rv7rx"]
 content_margin_left = 18.0
+content_margin_top = 19.0
 bg_color = Color(0.180392, 0.180392, 0.180392, 1)
 corner_radius_top_left = 25
 corner_radius_top_right = 25
@@ -56,10 +57,10 @@ placeholder_text = "Texto a cifrar"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 785.0
-offset_top = 7.0
-offset_right = 1122.0
-offset_bottom = 79.0
+offset_left = 784.0
+offset_top = 19.0
+offset_right = 1121.0
+offset_bottom = 91.0
 theme_override_fonts/font = ExtResource("2_ohmt0")
 theme_override_font_sizes/font_size = 50
 text = "Cifrado Yuans"

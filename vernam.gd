@@ -84,3 +84,7 @@ func _on_button_pressed():
 
 	var encrypted_message = vernam_encrypt(message, key)
 	$TextEdit3.text =  encrypted_message
+
+
+func _on_button_2_pressed():
+	get_tree().change_scene_to_file("res://opciones.tscn")

@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dbfsgvo8rfg6b"]
+[gd_scene load_steps=8 format=3 uid="uid://dbfsgvo8rfg6b"]
 
 [ext_resource type="Script" path="res://vernam.gd" id="1_xqfd3"]
+[ext_resource type="FontFile" uid="uid://coqsqbp81nvxq" path="res://simply_rounded/Simply Rounded Bold.ttf" id="2_5f1ur"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ll0n7"]
 bg_color = Color(0.180392, 0.180392, 0.180392, 1)
@@ -24,6 +25,13 @@ corner_radius_bottom_right = 25
 corner_radius_bottom_left = 25
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q4r6k"]
+bg_color = Color(0.180392, 0.180392, 0.180392, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o36yr"]
 bg_color = Color(0.180392, 0.180392, 0.180392, 1)
 corner_radius_top_left = 25
 corner_radius_top_right = 25
@@ -84,6 +92,7 @@ offset_left = -228.0
 offset_top = -281.0
 offset_right = 284.0
 offset_bottom = -195.0
+theme_override_fonts/font = ExtResource("2_5f1ur")
 theme_override_font_sizes/font_size = 50
 text = "Cifrado de Vernam"
 
@@ -96,4 +105,14 @@ offset_bottom = 239.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_q4r6k")
 text = "Ejecutar"
 
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = -568.0
+offset_top = -309.0
+offset_right = -456.0
+offset_bottom = -258.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_o36yr")
+text = "Regresar"
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

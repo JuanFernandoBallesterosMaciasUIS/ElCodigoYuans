@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bs1i7n3kwndma"]
+[gd_scene load_steps=5 format=3 uid="uid://bs1i7n3kwndma"]
 
 [ext_resource type="Script" path="res://opciones.gd" id="1_twkem"]
+[ext_resource type="FontFile" uid="uid://coqsqbp81nvxq" path="res://simply_rounded/Simply Rounded Bold.ttf" id="2_twk8f"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oojgr"]
 bg_color = Color(0.180392, 0.180392, 0.180392, 1)
@@ -72,6 +73,7 @@ offset_right = 788.0
 offset_bottom = 144.0
 size_flags_horizontal = 4
 size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("2_twk8f")
 theme_override_font_sizes/font_size = 50
 text = "El codigo Yuans"
 horizontal_alignment = 1

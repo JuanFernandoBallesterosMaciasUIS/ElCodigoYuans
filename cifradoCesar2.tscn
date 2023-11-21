@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://cifradoCesar2.gd" id="1_qgy4r"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s775v"]
+content_margin_left = 16.0
 bg_color = Color(0.180392, 0.180392, 0.180392, 1)
 corner_radius_top_left = 25
 corner_radius_top_right = 25
@@ -61,7 +62,7 @@ custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_s775v")
 placeholder_text = "    
-    Texto a cifrar o decifrar"
+Texto a cifrar o decifrar"
 
 [node name="TextEdit2" type="TextEdit" parent="HBoxContainer2"]
 custom_minimum_size = Vector2(400, 0)
@@ -69,7 +70,7 @@ layout_mode = 2
 size_flags_horizontal = 10
 theme_override_styles/normal = SubResource("StyleBoxFlat_s775v")
 placeholder_text = "
-     Resultado"
+Resultado"
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0

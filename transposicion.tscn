@@ -1,6 +1,37 @@
-[gd_scene load_steps=2 format=3 uid="uid://jewipj6uxbdy"]
+[gd_scene load_steps=7 format=3 uid="uid://jewipj6uxbdy"]
 
 [ext_resource type="Script" path="res://transposicion.gd" id="1_uwdmk"]
+[ext_resource type="FontFile" uid="uid://qb23fdwwv4pn" path="res://simply_rounded/Simply Rounded.ttf" id="2_onm3m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ah0il"]
+bg_color = Color(0.180392, 0.180392, 0.180392, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_272ih"]
+content_margin_left = 16.0
+bg_color = Color(0.180392, 0.180392, 0.180392, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cyly3"]
+content_margin_left = 16.0
+bg_color = Color(0.180392, 0.180392, 0.180392, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4utot"]
+bg_color = Color(0.180392, 0.180392, 0.180392, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -13,10 +44,11 @@ script = ExtResource("1_uwdmk")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 211.0
-offset_top = 52.0
-offset_right = 967.0
-offset_bottom = 164.0
+offset_left = 236.0
+offset_top = 50.0
+offset_right = 924.0
+offset_bottom = 162.0
+theme_override_fonts/font = ExtResource("2_onm3m")
 theme_override_font_sizes/font_size = 50
 text = "Transposicion columnar simple"
 
@@ -30,12 +62,14 @@ offset_bottom = 578.0
 [node name="Button" type="Button" parent="HBoxContainer"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_ah0il")
 text = "Cifrar"
 
 [node name="Button2" type="Button" parent="HBoxContainer"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_horizontal = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_ah0il")
 text = "Descifrar"
 
 [node name="TextEdit1" type="TextEdit" parent="."]
@@ -44,6 +78,7 @@ offset_left = 185.0
 offset_top = 155.0
 offset_right = 568.0
 offset_bottom = 224.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_272ih")
 placeholder_text = "Texto a cifrar o descifrar"
 
 [node name="TextEdit2" type="TextEdit" parent="."]
@@ -52,6 +87,7 @@ offset_left = 185.0
 offset_top = 231.0
 offset_right = 568.0
 offset_bottom = 271.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_cyly3")
 placeholder_text = "Clave"
 
 [node name="TextEdit3" type="TextEdit" parent="."]
@@ -60,7 +96,8 @@ offset_left = 679.0
 offset_top = 149.0
 offset_right = 967.0
 offset_bottom = 474.0
-placeholder_text = "Matriz"
+theme_override_styles/normal = SubResource("StyleBoxFlat_cyly3")
+placeholder_text = "    				   Matriz"
 
 [node name="TextEdit4" type="TextEdit" parent="."]
 layout_mode = 0
@@ -68,7 +105,18 @@ offset_left = 184.0
 offset_top = 284.0
 offset_right = 567.0
 offset_bottom = 353.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_cyly3")
 placeholder_text = "Resultado"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 11.0
+offset_right = 124.0
+offset_bottom = 54.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_4utot")
+text = "Regresar"
 
 [connection signal="pressed" from="HBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

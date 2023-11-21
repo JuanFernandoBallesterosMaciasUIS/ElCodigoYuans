@@ -22,6 +22,7 @@ func crear_matriz(mensaje: String, clave: String) -> Array:
 	return matriz
 
 
+
 # Ajusta la clave para que esté alineada con las columnas de la matriz.
 func ajustar_clave_para_matriz(clave: String) -> String:
 	var clave_ajustada = ""
@@ -106,3 +107,9 @@ func _on_button_pressed():
 
 func _on_button_2_pressed():
 	$TextEdit4.text = descifrar($TextEdit1.text, $TextEdit2.text)
+	
+
+
+
+func _on_button_3_pressed():
+	get_tree().change_scene_to_file("res://opciones.tscn")

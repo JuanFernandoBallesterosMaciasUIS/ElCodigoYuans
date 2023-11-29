@@ -106,6 +106,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_i8km1")
 text = "Regresar"
 
 [node name="Button4" type="Button" parent="."]
+layout_mode = 0
 offset_left = 636.0
 offset_top = 535.0
 offset_right = 785.0
